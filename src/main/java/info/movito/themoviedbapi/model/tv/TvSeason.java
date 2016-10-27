@@ -25,6 +25,9 @@ public class TvSeason extends AbstractTvElement {
     @JsonProperty("episodes")
     private List<TvEpisode> episodes;
 
+    @JsonProperty("episode_count")
+    private int episodeCount;
+
 
     public String getAirDate() {
         return airDate;
@@ -38,6 +41,10 @@ public class TvSeason extends AbstractTvElement {
 
     public int getSeasonNumber() {
         return seasonNumber;
+    }
+
+    public int getEpisodeCount() {
+        return episodeCount;
     }
 
 
@@ -58,6 +65,10 @@ public class TvSeason extends AbstractTvElement {
 
     public void setSeasonNumber(int seasonNumber) {
         this.seasonNumber = seasonNumber;
+    }
+
+    public void setEpisodeCount(int count) {
+        this.episodeCount = count;
     }
 
 
