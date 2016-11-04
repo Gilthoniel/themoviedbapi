@@ -203,7 +203,7 @@ public class TmdbSearch extends AbstractTmdbApi {
      * @return ResultsPage of Multi.
      * @see Multi
      */
-    public MultiListResultsPage searchMulti(String query, String language, Integer page) {
+    public MultiListResultsPage searchMulti(String query, String language, Integer page, boolean includeAdult) {
         ApiUrl apiUrl = new ApiUrl(TMDB_METHOD_SEARCH, TMDB_METHOD_MULTI);
 
         if (isBlank(query)) {
@@ -217,6 +217,8 @@ public class TmdbSearch extends AbstractTmdbApi {
         apiUrl.addLanguage(language);
 
         apiUrl.addPage(page);
+
+        apiUrl.addParam(PARAM_ADULT, includeAdult);
 
         return mapJsonResult(apiUrl, MultiListResultsPage.class);
     }
