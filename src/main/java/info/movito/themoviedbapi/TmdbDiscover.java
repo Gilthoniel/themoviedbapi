@@ -4,8 +4,10 @@ import info.movito.themoviedbapi.model.Discover;
 import info.movito.themoviedbapi.model.core.MovieResultsPage;
 import info.movito.themoviedbapi.tools.ApiUrl;
 
+import java.io.Serializable;
 
-public class TmdbDiscover extends AbstractTmdbApi {
+
+public class TmdbDiscover extends AbstractTmdbApi implements Serializable {
 
 
     public static final String TMDB_METHOD_DISCOVER = "discover";
